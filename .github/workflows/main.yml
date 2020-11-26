@@ -21,7 +21,7 @@ jobs:
         with:
           ref: gh-pages
       - name: echo xx
-        run: echo ${{ GITHUB_REF }} > a.txt
+        run: echo ${GITHUB_REF##*/} > a.txt
       - name: commit
         run: |
           git config --local user.email "action@github.com"
